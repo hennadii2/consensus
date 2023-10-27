@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package protos;
+
+enum PaperProvider {
+  UNKNOWN_PAPER_PROVIDER = 0;
+  SEMANTIC_SCHOLAR = 1;
+}
+
+message DerivedData {
+  enum Provider {
+    UNKNOWN_DERIVED_DATA_PROVIDER = 0;
+    CONSENSUS = 1;
+    SEMANTIC_SCHOLAR = 2;
+  }
+
+  // Required: Enum of provider of the derived data for easy filtering
+  Provider provider  = 1;
+
+  // Optional: Additional information about the derived data (eg. model name)
+  string description = 2;
+
+  // Required: Timestamp in microseconds this derived field was added
+  int64 created_at_usec = 7;
+
+  oneof data {
+    string string_data = 3;
+  }
+}
+
+// Schema for papers.paper_metadata column
+// WARNING: This is stored as JSONB with full text names in the table for
+// readability (rather than proto field numbers), so changing field names is
+// not backwards compatible. Add new fields only.
+// Next id: 19
+message PaperMetadata {
+  // Required: Title of the paper
+  string title = 1;
+
+  // Optional: Digital Object Identifier
+  string doi = 2;
+
+  // Required: Year of publication of the paper
+  int32 publish_year = 3;
+
+  // Optional: Full publication date string in YYYY-MM-DD format, if available
+  string publish_date = 13;
+
+  // Required: The language code for the paper
+  string language = 4;
+
+  // Optional: All authors of the paper
+  repeated string author_names = 5;
+
+  // Optional: Number of incoming citations on the paper, if available
+  int32 citation_count = 6;
+
+  // Required: Number of characters in the abstract
+  int32 abstract_length = 7;
+
+  // Optional: The journals table ID for this paper's journal
+  int32 journal_id = 12;
+
+  // Optional: The name of the journal
+  string journal_name = 8;
+
+  // Optional: The volume of the journal
+  string journal_volume = 15;
+
+  // Optional: The pages of the journal
+  string journal_pages = 16;
+
+  // Optional: The issn of the journal
+  string journal_issn = 17;
+
+  // Optional: Alternate issns of the journal
+  repeated string journal_alternate_issns = 18;
+
+  // Required: An enum value of the provider of this paper
+  PaperProvider provider = 9;
+
+  // Required: Provider specific ID (eg. s2Id or coreId)
+  string provider_id = 10;
+
+  // Optional: URL where the provider is hosting the data
+  string provider_url = 11;
+
+  // Optional: strings describing the field of study of the paper
+  repeated DerivedData fields_of_study = 14;
+}

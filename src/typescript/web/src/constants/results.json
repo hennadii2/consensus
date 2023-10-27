@@ -1,0 +1,92 @@
+{
+  "id": "123",
+  "isYesNoQuestion": true,
+  "canSynthesize": true,
+  "nuanceRequired": false,
+  "isEnd": true,
+  "numTopResults": 1,
+  "numRelevantResults": 1,
+  "claims": [
+    {
+      "id": "ae9bc3bc-7a07-429a-aae6-f14450d362bf",
+      "text": "Both Pfizer and Moderna <span className=\"font-bold\">vaccines</span> are highly <span className=\"font-bold\">effective</span> in preventing <span className=\"font-bold\">Delta</span> hospitalization and death, but less so in preventing infection.",
+      "url_slug": "are covid vaccines effective against delta?",
+      "score": 9.1,
+      "journal": "Hello World",
+      "title": "Randomized Trial on the Effects of a Mindfulness Intervention on Temperament, Anxiety, and Depression: A Multi-Arm Psychometric Study",
+      "year": 2022,
+      "citation_count": 5,
+      "primary_author": "Magdalena",
+      "badges": {
+        "very_rigorous_journal": true,
+        "rigorous_journal": false,
+        "highly_cited_paper": true,
+        "study_type": "rct"
+      }
+    },
+    {
+      "id": "34e71a0a-ccda-418b-a172-8a745810c2cb",
+      "text": "Authorized <span className=\"font-bold\">vaccines</span> have high <span className=\"font-bold\">effectiveness against COVID-19</span> hospitalization, but <span className=\"font-bold\">effectiveness against</span> new cases appears to have declined in recent months due to the <span className=\"font-bold\">Delta</span> variant.",
+      "url_slug": "test 2",
+      "score": 7.4,
+      "journal": "Hello World",
+      "title": "Title",
+      "year": 2012,
+      "primary_author": "Magdalena",
+      "badges": {
+        "very_rigorous_journal": false,
+        "rigorous_journal": true,
+        "highly_cited_paper": true,
+        "study_type": "rct"
+      }
+    },
+    {
+      "id": "5c99442b-0e49-4577-98e8-641e0f966db7",
+      "text": "Only modest differences in <span className=\"font-bold\">vaccine effectiveness</span> were noted with the <span className=\"font-bold\">delta</span> variant as compared with the alpha variant after two <span className=\"font-bold\">vaccine</span> doses.",
+      "url_slug": "test 3",
+      "score": 8.9,
+      "journal": "Hello World",
+      "title": "Title",
+      "year": 2012,
+      "primary_author": "Magdalena",
+      "badges": {
+        "very_rigorous_journal": true,
+        "rigorous_journal": false,
+        "highly_cited_paper": false,
+        "study_type": "rct"
+      }
+    },
+    {
+      "id": "b5c28d8d-7ce2-4887-a6b8-8ddb8f96b331",
+      "text": "Both Pfizer and Moderna <span className=\"font-bold\">vaccines</span> are highly <span className=\"font-bold\">effective</span> in preventing <span className=\"font-bold\">Delta</span> hospitalization and death, but less so in preventing infection.",
+      "url_slug": "test 4",
+      "score": 9.1,
+      "journal": "Hello World",
+      "title": "Title",
+      "year": 2012,
+      "primary_author": "Magdalena",
+      "badges": {
+        "very_rigorous_journal": true,
+        "rigorous_journal": false,
+        "highly_cited_paper": true,
+        "study_type": "rct"
+      }
+    },
+    {
+      "id": "53e54c00-11ab-4be3-935b-b9cd7c825d0f",
+      "url_slug": "test 5",
+      "text": "Authorized <span className=\"font-bold\">vaccines</span> have high <span className=\"font-bold\">effectiveness against COVID-19</span> hospitalization, but <span className=\"font-bold\">effectiveness against</span> new cases appears to have declined in recent months due to the <span className=\"font-bold\">Delta</span> variant.",
+      "score": 7.4,
+      "journal": "Hello World",
+      "title": "Title",
+      "year": 2012,
+      "primary_author": "Magdalena",
+      "badges": {
+        "very_rigorous_journal": true,
+        "rigorous_journal": false,
+        "highly_cited_paper": true,
+        "study_type": "rct"
+      }
+    }
+  ]
+}

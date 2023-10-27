@@ -1,0 +1,92 @@
+{
+  "queries": [
+    "are covid-19 vaccines effective?",
+    "benefits of mindfulness",
+    "direct cash transfers and poverty"
+  ],
+  "question_types": [
+    {
+      "key": "yes_no",
+      "title": "Ask a simple yes/no question",
+      "queries": [
+        "Can Zinc help treat depression?",
+        "Does morning sunlight improve mood?",
+        "Do home crowds impact referee bias?"
+      ]
+    },
+    {
+      "key": "relationship",
+      "title": "Ask a question about the relationship between concepts",
+      "queries": [
+        "How does spanking impact childhood development?",
+        "What predicts success as a startup founder?",
+        "Does creatine improve cognition?"
+      ]
+    },
+    {
+      "key": "effects",
+      "title": "Ask about the effects of a concept",
+      "queries": [
+        "What are the effects of gratitude practice?",
+        "What are the mental health benefits of psychedelics?",
+        "What are the effects of drug decriminalization?"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "key": "supplements",
+      "title": "Supplements",
+      "queries": [
+        "Does NO3 improve exercise performance?",
+        "Is ashwagandha good for anxiety?",
+        "Is fish oil good for heart health?"
+      ]
+    },
+    {
+      "key": "economics",
+      "title": "Economics",
+      "queries": [
+        "Does raising the minimum wage increase unemployment?",
+        "Immigration effects on the economy",
+        "What is the impact of climate change on GDP?"
+      ]
+    },
+    {
+      "key": "sleep",
+      "title": "Sleep",
+      "queries": [
+        "Does magnesium improve sleep?",
+        "Can mindfulness help sleep?",
+        "Is social media bad for sleep?"
+      ]
+    },
+    {
+      "key": "medicine",
+      "title": "Medicine",
+      "queries": [
+        "What is the best treatment for restless leg syndrome?",
+        "Are covid vaccines safe for pregnant women?",
+        "Does visceral fat increase the risk of cancer?"
+      ]
+    },
+    {
+      "key": "social_policy",
+      "title": "Social policy",
+      "queries": [
+        "Does intergroup contact reduce prejudice?",
+        "How to increase voter turnout",
+        "Effect of dcecriminalization on drugs"
+      ]
+    },
+    {
+      "key": "mental_health",
+      "title": "Mental Health",
+      "queries": [
+        "Do relationships make people happy?",
+        "Does physical exercise improve cognition?",
+        "Can CBT treat fear?"
+      ]
+    }
+  ]
+}

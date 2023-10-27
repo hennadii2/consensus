@@ -1,0 +1,40 @@
+{
+    "id": "33b237709dbd53953a750355115b57ccb6690da1",
+    "title": "USING PHOTO IMAGES TO DETERMINE THE GEOMETRIC PARAMETERS OF LARGE OBJECTS",
+    "paperAbstract": "",
+    "authors": [
+        {
+            "name": "E  Popov",
+            "ids": [
+                "39390170"
+            ],
+            "structuredName": null
+        },
+        {
+            "name": "O  Raskatkina",
+            "ids": [
+                "108722565"
+            ],
+            "structuredName": null
+        }
+    ],
+    "inCitations": [],
+    "outCitations": [],
+    "year": 2019,
+    "s2Url": "https://semanticscholar.org/paper/33b237709dbd53953a750355115b57ccb6690da1",
+    "sources": [],
+    "pdfUrls": [],
+    "venue": "Bulletin of South Ural State University series \"Construction Engineering and Architecture\"",
+    "journalName": "Bulletin of South Ural State University series \"Construction Engineering and Architecture\"",
+    "journalVolume": "",
+    "journalPages": "",
+    "doi": "10.14529/build190307",
+    "doiUrl": "https://doi.org/10.14529/build190307",
+    "pmid": "",
+    "fieldsOfStudy": [
+        "Computer Science"
+    ],
+    "magId": "3000193832",
+    "s2PdfUrl": "",
+    "entities": []
+}

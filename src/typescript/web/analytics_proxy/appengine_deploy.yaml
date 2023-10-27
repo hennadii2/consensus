@@ -1,0 +1,10 @@
+# GCP App Engine deployment configuration
+
+runtime: custom
+env: flex
+service: analytics-proxy
+
+network:
+  instance_tag: analytics-proxy
+  name: dev-vpc
+  subnetwork_name: subnet-us-central1

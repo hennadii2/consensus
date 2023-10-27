@@ -1,0 +1,15 @@
+# GCP App Engine deployment configuration: TEMPLATE
+# Environment variables are replaced by github actions during deployment
+
+runtime: custom
+env: flex
+service: labeling
+
+network:
+  instance_tag: labeling
+  name: dev-vpc
+  subnetwork_name: subnet-us-central1
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1

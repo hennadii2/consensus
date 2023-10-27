@@ -1,0 +1,51 @@
+# GCP App Engine deployment configuration: TEMPLATE
+# Environment variables are replaced by github actions during deployment
+
+runtime: custom
+env: flex
+service: ${ APPENGINE_SERVICE_NAME }
+env_variables:
+  GCLOUD_PROJECT_ID: consensus-334718
+  WEB_BACKEND_ENV: ${ WEB_BACKEND_ENV }
+  WEB_BACKEND_DB_ENV: ${ WEB_BACKEND_DB_ENV }
+  WEB_BACKEND_SEARCH_ENV: ${ WEB_BACKEND_SEARCH_ENV }
+  WEB_BACKEND_PORT: 8080
+  WEB_BACKEND_SEARCH_INDEX: ${ WEB_BACKEND_SEARCH_INDEX }
+  WEB_BACKEND_AUTOCOMPLETE_INDEX: ${ WEB_BACKEND_AUTOCOMPLETE_INDEX }
+  WEB_BACKEND_SERVICES_HOST: ${ WEB_BACKEND_SERVICES_HOST }
+
+inbound_services:
+- warmup
+
+network:
+  instance_tag: ${ APPENGINE_INSTANCE_TAG }
+  name: dev-vpc
+  subnetwork_name: subnet-us-central1
+
+automatic_scaling:
+  min_num_instances: ${ APPENGINE_AUTO_SCALING_MIN_INSTANCES }
+  max_num_instances: ${ APPENGINE_AUTO_SCALING_MAX_INSTANCES }
+  cpu_utilization:
+    target_utilization: ${ APPENGINE_AUTO_SCALING_CPU_TARGET }
+  target_concurrent_requests: 15
+
+resources:
+  cpu: ${ APPENGINE_RESOURCES_CPU }
+  memory_gb: ${ APPENGINE_RESOURCES_MEMORY_GB }
+  disk_size_gb: ${ APPENGINE_RESOURCES_DISK_SIZE_GB }
+
+liveness_check:
+  initial_delay_sec: 300
+  path: /custom_liveness_check
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 4
+  success_threshold: 2
+
+readiness_check:
+  app_start_timeout_sec: 900
+  path: /custom_readiness_check
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 4
+  success_threshold: 2

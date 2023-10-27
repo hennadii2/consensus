@@ -1,0 +1,39 @@
+.cl-component {
+  --clerk-font-family: Product Sans, Helvetica, Arial, sans-serif;
+  --clerk-button-font-family: Product Sans, Helvetica, Arial, sans-serif;
+  --clerk-label-font-weight: 500;
+  --clerk-primary: #99c1f1;
+}
+
+.cl-logoBox {
+  height: 120px !important;
+  justify-content: center !important;
+}
+
+.cl-logoImage img {
+  content: url("/images/logo-full.svg");
+}
+
+.cl-auth-form-header {
+  padding-top: 20px !important;
+  margin-top: -10px;
+}
+
+.cl-auth-form-body button:hover {
+  background: #66a2ea;
+}
+
+.cl-oauth-button-group {
+  margin-top: 16px !important;
+}
+
+.cl-primary-button,
+.cl-sign-in-button,
+.cl-sign-up-button {
+  background: #d3eafd !important;
+  color: #085394 !important;
+}
+
+.cl-card a {
+  color: #085394 !important;
+}

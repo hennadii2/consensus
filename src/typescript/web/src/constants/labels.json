@@ -1,0 +1,690 @@
+{
+  "page-title": "Consensus",
+  "general": {
+    "learn-more": "Learn more",
+    "learn-how": "Learn how to search",
+    "load-more": "Load More",
+    "search-input-placeholder": "Ask a research question",
+    "related-claims": "Related claims",
+    "best": "Best",
+    "great": "Great",
+    "good": "Good",
+    "try-searching": "Try Searching",
+    "join-waitlist": "Join waitlist",
+    "since": "Since",
+    "all-years": "All years",
+    "signup": "Sign up",
+    "published-since": "Published since",
+    "apply": "Apply",
+    "reset": "Reset",
+    "reset-filters": "Reset filters",
+    "study-types": "Study Types",
+    "applied-filters": "Applied filters"
+  },
+  "screens": {
+    "index": {
+      "title": "Search - Consensus - Evidence-Based Answers, Faster",
+      "description": "Consensus is a search engine that uses AI to find answers in scientific research.",
+      "subtitle": "Ask a question, get conclusions from research papers",
+      "trending": "Trending",
+      "question": {
+        "title": "How to search?",
+        "text": "Consensus uses AI to find answers in research papers. The best way to search is to ask a question."
+      },
+      "topics": {
+        "title": "Answers on any research topic",
+        "text": "Focus on questions that researchers may have studied. See example topics below ranging from biology to social sciences"
+      },
+      "help": {
+        "title": "How you can help",
+        "button": "About our mission",
+        "items": [
+          {
+            "text": "Share results on social media",
+            "icon": "twitter",
+            "button": "Follow us",
+            "url": "twitter"
+          },
+          {
+            "text": "Suggest topics for our blog",
+            "icon": "blogging",
+            "button": "Blog",
+            "url": "blog"
+          },
+          {
+            "text": "Report issues to support",
+            "icon": "support",
+            "button": "Contact us",
+            "url": "intercom"
+          }
+        ]
+      }
+    },
+    "search": {
+      "title": "Consensus findings for",
+      "description": "Find out what the research says about '{query}'",
+      "subtitle": {
+        "first-paragraph": "Consensus extracted findings related to",
+        "second-paragraph": "are covid vaccines effective against delta?"
+      },
+      "share": "Share",
+      "share-search": "Share search",
+      "share-this-finding": "Share this finding",
+      "share-text": "{text}\nResults from Consensus:\n{url}",
+      "share-title": "Share what the science says about this query",
+      "cite-title": "Cite this finding",
+      "relevant": "Relevant findings",
+      "try-yes-no-title": "Try asking a 'Yes/No question'",
+      "try-yes-no-desc": "To unlock the Consensus Meter, ask a yes or no question.",
+      "relevant-results": "highly relevant results",
+      "most-relevant-results": "Most relevant results below"
+    },
+    "details": {
+      "description": "Consensus used AI to extract this finding from '{paper title}'",
+      "claim-details": "Claim Details",
+      "abstract": "Abstract",
+      "claim": "Claim",
+      "finding": "Finding",
+      "paper": "Paper",
+      "journal": "Journal",
+      "ranked": "Ranked",
+      "authors": "Authors",
+      "view-full-text": "Full text",
+      "cite": "Cite",
+      "share-finding": "Share Finding",
+      "share-this-finding": "Share this finding",
+      "cite-title": "Cite this finding",
+      "share": "Share",
+      "load-more": "Load More",
+      "share-text": "\"{text}\"\n{url}\nVia Consensus",
+      "citations": "Citations",
+      "published-in": "Published in",
+      "found-by": "Found by",
+      "et-al": "et al.",
+      "empty-journal-name": "Journal name not available for this finding",
+      "enhanced": "Enhanced",
+      "semantic-scholar": "Semantic Scholar",
+      "quality-indicators": "Quality indicators",
+      "pdf": "PDF",
+      "key-takeaway": "Key Takeaway"
+    },
+    "feature-flag": {
+      "title": "Feature Flag"
+    },
+    "nosearchresult": {
+      "first-title": "Sorry, there were no findings related to your search.",
+      "second-title": "Try searching again.",
+      "description": "If there are specific fields or topics you think we should add to Consensus search, please let us know at"
+    },
+    "notfound": {
+      "title": "Uh oh. Page not found.",
+      "description": "If you are in the Beta program, try searching!<br />If not, please go back to the <a style='color: #0A6DC2;' href='/'>Consensus home page</a> to sign up or learn more."
+    },
+    "servererror": {
+      "oops": "Oops. There's a temporary problem with Consensus.",
+      "description": "We are still in Beta, so this could happen from time to time. Please retry or give us a few moments to resolve the issue.",
+      "title": "Error - Consensus - Evidence-Based Answers, Faster"
+    },
+    "findingmissing": {
+      "title": "Uh oh. This scientific finding is missing.",
+      "description": "It may have moved locations, so please try searching for something similar."
+    },
+    "loadingsearchresult": {
+      "first": "Extracting findings <br/> from 200 million scholarly documents",
+      "second": "Extracting authors' findings<br /> based on the evidence",
+      "third": "Surfacing the best results<br /> for your search"
+    },
+    "sign-in": {
+      "sign-in-first": "Sign in first!",
+      "sign-in-first-desc": "Please sign in to search! No account yet? <a style='color: #0A6DC2; text-decoration: underline;' href='SIGN_UP_URL'>Sign Up</a>",
+      "sign-in-first-beta": "We are still in Beta. If you aren’t in the Beta program yet, <a style='color: #0A6DC2; text-decoration: underline;' href='WAITLIST_URL'>sign up for the waitlist here</a>.",
+      "message-title": "Why do I need an account?",
+      "message-1": "Now, we need to understand how people use Consensus in order to make it better",
+      "message-2": "In the future, your Consensus account will control settings for new features we are working on",
+      "message-title-2": "Consensus will NEVER share your data!",
+      "message-desc": "Unlike other search engines, all user data is 100% anonymized and your searches won't follow you around the Web",
+      "title": "Sign In - Consensus - Evidence-Based Answers, Faster",
+      "description": "Sign in to search! Consensus is a search engine that uses AI to find answers in scientific research."
+    },
+    "sign-up": {
+      "verify-message": "If you cannot find the verification email, check your promotions or spam folders. Reach out to <a style='color: #0A6DC2; text-decoration: underline;' href='mailto:SUPPORT_EMAIL'>SUPPORT_EMAIL</a> for any issues.",
+      "title": "Sign Up - Consensus - Evidence-Based Answers, Faster",
+      "description": "Sign up for free! Consensus is a search engine that uses AI to find answers in scientific research."
+    },
+    "too-many-requests": {
+      "message": "Guest Usage Limit Reached!",
+      "description": "You've viewed the maximum page views allowed without logging in. This helps us keep our site speedy for everyone. Thanks for understanding!",
+      "message-auth": "Sorry, you have exceeded acceptable use.",
+      "description-auth": "If you think this is a mistake and you are using Consensus properly, please contact <a style='color: #085394; font-weight: bold;' href='mailto:SUPPORT_EMAIL'>SUPPORT_EMAIL</a>",
+      "description-auth2": "If you think this is a mistake and you are using Consensus properly, please contact <a style='color: #0A6DC2;' href='mailto:SUPPORT_EMAIL'>SUPPORT_EMAIL</a>",
+      "title": "Error - Consensus - Evidence-Based Answers, Faster"
+    },
+    "pricing": {
+      "title": "Consensus Pricing",
+      "description": "Upgrade to streamline your research with all Consensus has to offer.",
+      "page-title": "Affordable Plans for Intuitive & Reliable Research",
+      "page-title-mobile": "Affordable Plans",
+      "page-subtitle": "Upgrade to take full advantage of AI-powered features and all Consensus has to offer",
+      "custom": "Custom",
+      "current-plan": "Current plan",
+      "upgrade-plan": "Upgrade plan",
+      "contact-sales": "Contact sales",
+      "premium-description": "Everything in Free plus...",
+      "enterprise-description": "Everything in Premium plus...",
+      "per-month": "per Month",
+      "billed-annually": "billed annually",
+      "try-searching-for-free": "Try searching for free",
+      "get-access": "Get Access",
+      "discount-title": "Student? Claim your 40% student discount",
+      "discount-message-title": "Verify your student eligibility to claim your student discount:",
+      "discount-message-text1": "My Consensus account has a .edu or .ac email address",
+      "discount-message-text2": "I have a .edu or .ac email but it is not linked to my Consensus account",
+      "discount-message-text3": "I am a student but I don't have a .edu or .ac email"
+    },
+    "subscription": {
+      "title": "Subscription Management - Consensus",
+      "description": "View your subscription status, premium feature usage, payment details, and explore different plans.",
+      "page-title": "Subscription Management",
+      "page-subtitle": "View your subscription status, premium feature usage, payment details, and explore different plans.",
+      "per-month": "per Month",
+      "cancel-confirm-modal": {
+        "title": "Are you sure you would like to cancel your subscription to Consensus Premium?",
+        "title-lose-access": "You will lose access to the following:",
+        "text1": "Consensus is still very young and your support helps us grow.",
+        "text2": "To suggest improvements to the subscription product, email:",
+        "confirm": "Keep Premium",
+        "cancel": "Cancel subscription"
+      },
+      "resume-confirm-modal": {
+        "title": "Would you like to resume your subscription?",
+        "renews-on": "Renews on",
+        "button-yes": "Yes, resume subscription",
+        "button-cancel": "Cancel"
+      }
+    },
+    "update-email": {
+      "title": "Update Email",
+      "description": "Generate customer portal link to allow users to edit their email.",
+      "success": "Email sent! Please check your email again and follow the instructions to link your Stripe payment to your Consensus account.<br>If you have any questions, contact <a href='mailto:{email}' class='font-bold text-[#085394]'>{email}</a> for help.",
+      "fail": "Failed to send link. Please confirm your email address is correct and Please refresh the page to try again.",
+      "email-subject": "Edit your Consensus payment email",
+      "email-body": "<a href=\"{link}\">Please click this link to update your email address in Stripe to match the email address of your Consensus account.</a><br>If you aren't sure what email address is associated with your Consensus account, you can create a new Consensus account using this email, or contact {email} for help."
+    },
+    "bookmark-lists": {
+      "title": "Lists - Consensus",
+      "page-title": "Lists",
+      "description": "Manage bookmark lists.",
+      "create-new-list": "Create new list",
+      "action-button": {
+        "edit-list": "Edit list",
+        "delete-list": "Delete list"
+      },
+      "want-unlimited": "Want unlimited?",
+      "upgrade-to-premium": "Upgrade to Premium",
+      "custom-lists-left": "Custom Lists left",
+      "bookmarks-left": "Bookmarks left"
+    },
+    "bookmark-list-detail": {
+      "title": "{list-title} - Lists - Consensus",
+      "description": "Bookmark List Detail",
+      "empty-message": "You are not the owner of this list.<br>Please create your own list to view your saved bookmarks.",
+      "back-to-lists": "Back to lists",
+      "delete-list": "Delete list",
+      "papers": "Papers",
+      "searches": "Searches",
+      "empty-state": {
+        "title": "You did not save anything yet",
+        "try-searching": "Try searching:",
+        "query-text": "does remote patient monitoring improve outcomes?"
+      }
+    }
+  },
+  "tooltips": {
+    "beta": "Beta",
+    "study-type-disclaimer": "Study type labels are 90% accurate",
+    "score": {
+      "title": "Claim Confidence Score",
+      "content": "Consensus uses information from the claim, paper, study design, journal, and more to estimate the credibility of a claim. Our process is based on the latest research in metascience, but the technology is young so please allow time for us to refine this feature"
+    },
+    "help": {
+      "title": "Improve Your Consensus Experience",
+      "how-search": "How to Search",
+      "how-search-desc": "Get the best results",
+      "how-works": "How it Works",
+      "how-works-desc": "Learn how we find answers",
+      "add-to-home": "Add to Home",
+      "add-to-home-desc": "Save Consensus like a mobile app",
+      "visit": "Visit Help Center"
+    },
+    "disputed": {
+      "tag": "Disputed",
+      "title": "Claim Disputed",
+      "content": "We detected a potential issue with this claim. {reason} Please review additional relevant findings in Consensus, or see the link below for high quality research addressing this topic.",
+      "button": "Learn more"
+    },
+    "rigorous-journal": {
+      "tag": "Rigorous Journal",
+      "very-tag": "Very Rigorous Journal",
+      "powered-by": "Powered by",
+      "title": "This issue ranked in the <strong>top {value}%</strong> of journals measured by SciScore",
+      "content": "The <strong>SciScore Rigor and Transparency Index</strong> scores thousands of journals on specific scientific rigor criteria, such as randomization, blinding, and statistical power",
+      "button": "Learn more"
+    },
+    "highly-cited": {
+      "tag": "Highly Cited",
+      "title": "This paper is in the top 5% of most cited papers in our database.",
+      "result-title": "From a paper in the top 5% of most cited papers in our database.",
+      "content": "Having lots of citations does not necessarily mean the finding is more valid, but it is an indicator of a paper's influence."
+    },
+    "case-study": {
+      "tag": "Case Report",
+      "title": "Case Report",
+      "content": "A <strong>case report</strong> is a paper that describes an individual case or subject (n = 1). While case reports can be useful anecdotes to justify further research, findings should not be generalized."
+    },
+    "rct": {
+      "tag": "RCT",
+      "title": "RCT",
+      "content": "A <strong>randomized controlled trial</strong> is a study where participants are randomly assigned to the control or the experimental group. RCTs are considered the gold-standard for experimental design."
+    },
+    "meta-analysis": {
+      "tag": "Meta Analysis",
+      "title": "Meta-analysis",
+      "content": "A <strong>meta-analysis</strong> is a statistical analysis that combines data from many studies in order to reduce the error of any one study. While often considered high quality evidence, it is still subject to the quality of the underlying studies."
+    },
+    "systematic-review": {
+      "tag": "Systematic Review",
+      "title": "Systematic Review",
+      "content": "A <strong>systematic review</strong> is a summary of the scientific literature related to a specific question. Only studies that meet a specific selection criteria are included in the review, allowing authors to draw conclusions relevant to the research question."
+    },
+    "meter": {
+      "title": "Consensus Meter",
+      "content": "The Consensus Meter attempts to classify the most relevant findings based on how they would answer your question. The maximum # of papers we can analyze is 20, so we may be missing important research.",
+      "warning": "Our current model is only 90% accurate and may miss important context. <br /> <br /> Please read the papers, consult additional trusted sources, and do not use the meter to make big life decisions.",
+      "learn-more": "Learn more"
+    },
+    "summary": {
+      "title": "Summary",
+      "learn-more": "Learn more",
+      "content": "The Summary feature attempts to synthesize the most relevant findings in Consensus into a single sentence that answers your question. We can only analyze up to 10 papers at a time, so we may be missing important research. ",
+      "warning": "This feature is powered by a generative AI model, and may generate incorrect information. <br /> <br /> Please read the papers, consult additional trusted sources, and do not use the summary to make big life decisions."
+    },
+    "enhanced": {
+      "content": "Consensus used AI to add missing context from the paper to this finding."
+    },
+    "synthesize-toggle": {
+      "unlocked": {
+        "free-title": "Synthesize multiple papers",
+        "premium-title": "Synthesize insights ",
+        "description": "Enable to have our AI read several papers and synthesize the findings.",
+        "free-plan": "Free Plan",
+        "ai-credits-left": "AI Credits left",
+        "premium-plan": "Premium Plan",
+        "premium-plan-description": "You have <b>unlimited</b> AI Credits.",
+        "renews-on": "Renews on",
+        "upgrade-to-premium": "Upgrade to Premium"
+      }
+    },
+    "bookmark-premium-tooltip": {
+      "free-plan": "Free Plan",
+      "limited-list-description": "Sorry, the Free plan only comes with <b>1</b> Custom list. If you want unlimited - upgrade your plan!",
+      "limited-items-description": "Sorry, the Free Plan only comes with <b>10</b> Bookmarks. If you want unlimited - upgrade your plan! ",
+      "view-pricing": "View pricing",
+      "upgrade-to-premium": "Upgrade to Premium"
+    },
+    "more-results": {
+      "title": "Less relevant results",
+      "content": "The following results may not be directly related to your search, but may still be helpful."
+    },
+    "non-rct-trial": {
+      "tag": "Non-RCT Trial",
+      "title": "Non-RCT Trial",
+      "content": "A <strong>non-RCT trial</strong> is an experiment that is either not randomized or not controlled. While these studies can still be well-designed, they may not hold as much weight as true RCTs."
+    },
+    "observational-study": {
+      "tag": "Observational Study",
+      "title": "Observational Study",
+      "content": "An <strong>observational study</strong> is when researchers observe the effects of a variable that they did not introduce. While these studies can be informative with large samples, they are not considered as useful as experiments for determining causality."
+    },
+    "literature-review": {
+      "tag": "Literature Review",
+      "title": "Literature Review",
+      "content": "A <strong>literature review</strong> is a summary of the available academic literature related to a topic. While these reviews are able to synthesize insights across many papers, they may not have a rigorous of selection criteria like Systematic Reviews."
+    },
+    "animal-trial": {
+      "tag": "Animal Trial",
+      "title": "Animal Trial",
+      "content": "An <strong>animal trial</strong> is an experiment conducted on animal subjects rather than humans. Animal trials are an important step to verify the safety of interventions, but human trials are needed to confirm the conclusions are applicable to people."
+    },
+    "in-vitro-trial": {
+      "tag": "In Vitro Trial",
+      "title": "In Vitro Trial",
+      "content": "An <strong>in vitro trial</strong> is an experiment conducted outside of a living organism (in a test tube, petri dish, etc.). Experiments in live organisms are required to confirm if the results, but in vitro trials can help decide if further research is warranted."
+    },
+    "large-human-trial": {
+      "tag": "Large Human Trial",
+      "title": "Large Human Trial",
+      "content": [
+        "Our AI detected that this paper:",
+        "Tested an experimental intervention",
+        "Had human subjects",
+        "Had sample size >= 300",
+        "The conclusions may be broadly applicable to relevant human populations."
+      ]
+    },
+    "sjr-quartiles": {
+      "title": "SJR Quartiles",
+      "content": "<a href='https://www.scimagojr.com/' rel='noreferrer' target='_blank' style='color: #0A6DC2; font-weight: bold;'>Scimago Journal Rank</a> measures the influence of journals within a domain. Scores are divided into quartiles, with Q1 being the most influential and Q4 being the least.",
+      "footer": "Note: We do not have SJR mapped to every paper"
+    },
+    "study-details": {
+      "title": "Study Snapshot",
+      "content": "Consensus uses AI to extract key information about a study's methods",
+      "ai-credits-left": "AI Credits left",
+      "renews-on": "Renews on",
+      "upgrade-to-premium": "Upgrade to Premium",
+      "premium-plan": "Premium Plan",
+      "premium-plan-description": "You have <b>unlimited</b> AI Credits."
+    },
+    "study-details-filter": {
+      "title": "Study Details",
+      "content": "Consensus uses AI to extract key information about a study's methods",
+      "footer": "Note: We do not have these values for every paper"
+    },
+    "study-types": {
+      "title": "Study Types",
+      "content": "Consensus uses AI to classify the type of study design used. The badge colors map to regions of the generally accepted <a href='HIERARCHY_OF_EVIDENCE_URL' rel='noreferrer' target='_blank' style='color: #0A6DC2; font-weight: bold;'>pyramid of evidence</a> and the associated study types",
+      "footer": "Note: We do not have this value for every paper"
+    }
+  },
+  "share": {
+    "copy-link": "Copy Link",
+    "copied": "Copied",
+    "copy-message": "copied to clipboard",
+    "twitter": "Twitter",
+    "share-on-twitter": "Share on Twitter",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "copy-text": "Copy Text",
+    "link-text": "Link + Text",
+    "LINK": "Link",
+    "TEXT": "Text",
+    "LINK_TEXT": "Link + Text",
+    "or": "or",
+    "include-link": "Include link with text",
+    "include-query-link": "Include query text with link",
+    "include-summary-link": "Include summary text with link"
+  },
+  "beta": {
+    "feature": "Beta Feature",
+    "important-note": "Important note:",
+    "first-text": "Consensus results are not meant to be taken as final truth, but rather, as a reflection of relevant research.",
+    "second-text": "Science is complex and interpreting results requires nuanced understanding. Please do your due diligence when using this early version. Your engagement and feedback will only make it better!"
+  },
+  "error": {
+    "warning": "Not so fast!",
+    "unregistered-beta": "Sorry, it looks like the email you entered is not part of the Beta program just yet.",
+    "signup-waitlist": "Sign up for the waitlist",
+    "or-try": "or try a different email",
+    "couldnt-find-account": "Couldn't find your account. Make sure you entered the right email or <a href='/sign-up/'>Sign Up</a> first"
+  },
+  "waitlist": {
+    "subtitle": "Evidence-based answers, faster",
+    "description": "Want more research-backed insights like these? Join the <strong>Consensus Beta</strong> waitlist!",
+    "description-sign-up": "Want more research-backed insights like these? Sign up to search",
+    "button": "Join Waitlist",
+    "already": "Already invited from the waitlist? Please",
+    "already-have-account": "Already have an account? Please",
+    "login": "Login",
+    "sign-up": "Sign up",
+    "success": "Thank you! You'll be off the waitlist soon. <a target='_blank' style='color: #0A6DC2; text-decoration: underline;' href='{TWITTER}'>Follow us on Twitter</a> for updates"
+  },
+  "meter": {
+    "summary": "Summary",
+    "YES": "Yes",
+    "POSSIBLY": "Possibly",
+    "NO": "No",
+    "MIXED": "Results are mixed",
+    "MIXED_YES": "Mixed, but lean 'Yes'",
+    "MIXED_NO": "Mixed, but lean 'No'",
+    "UNKNOWN": "Unknown",
+    "incomplete": {
+      "not-enough": "Not enough relevant results.",
+      "try-asking": "Try asking a well-researched question in the format 'Does x cause y?'",
+      "eg": "E.g. Does beta alanine improve exercise performance?",
+      "not-enough-predictions": "Not enough predictions.",
+      "needs-at-least-5": "The meter needs at least 5 yes/no predictions to display. Try asking a popular research question."
+    },
+    "skipped": {
+      "bold-text": "Nuance required.",
+      "explanation": "Our models detected a potentially complicated question and are not yet accurate enough to provide a definitive answer. We are working to handle this in the future, but for now, please try another question."
+    },
+    "feature-limit": {
+      "bold-text": "Oops!",
+      "explanation": "You have used all of your free Consensus Meters for the month."
+    },
+    "disputed": "A significant portion of the findings in this analysis have been disputed",
+    "disputed-tooltip": "We detected a significant number of disputed results in this analysis. The Consensus Meter and Summary are still in Beta, so please do not take the results too seriously. Continue to rely on trusted sources of scientific information for important questions.",
+    "error-title": "Whoops! An error has occurred.",
+    "error-desc": "The Consensus Meter is still in Beta, so this may happen occasionally. Please try again later.",
+    "papers-analyzed": "papers analyzed",
+    "beta": {
+      "first": "These features are in Beta and not 100% accurate.",
+      "first-short": "These features are not 100% accurate.",
+      "second": "You can share feedback",
+      "here": "here"
+    },
+    "is-not-question": {
+      "not-enough": "Not a ‘Yes or No’ question.",
+      "try-asking": "To use the Consensus Meter, try asking a simple Yes/No question.",
+      "eg": "E.g. Does beta alanine improve exercise performance?"
+    },
+    "can-not-synthesize": {
+      "title": "Nuance required.",
+      "desc": "Our models detected a potentially complicated question and are not yet accurate enough to provide a definitive answer. We are working to handle this in the future, but for now, please try another question."
+    },
+    "want-unlimited": "Want unlimited?",
+    "view-pricing": "View Pricing",
+    "upgrade-to-premium": "Upgrade to Premium"
+  },
+  "question-summary": {
+    "synthesize": "Synthesize",
+    "try-question-title": "Try asking a question",
+    "try-question-desc": "To unlock the synthesis features, ask a simple research question.",
+    "try-synthesize-title": "Synthesize insights across papers",
+    "try-synthesize-desc": "Enable to have our AI read several papers and synthesize the findings",
+    "summary": "Summary",
+    "view-all": "View all",
+    "limit": {
+      "title": "Sorry, too much traffic.",
+      "desc": "Generative tasks are expensive, and we are experiencing a spike in requests. Please give us some time to get this feature back online."
+    },
+    "feature-limit": {
+      "title": "Oops!",
+      "desc": "You have used all of your free GPT-4 Summaries for the month."
+    },
+    "papers-analyzed": "Top {count} papers analyzed",
+    "error-desc": "The Summary is still in Beta, so this may happen occasionally. Please try refreshing the page. If this doesn't work, try again later.",
+    "want-unlimited": "Want unlimited?",
+    "view-pricing": "View Pricing",
+    "upgrade-to-premium": "Upgrade to Premium"
+  },
+  "subscription-usage": {
+    "title": "Usage",
+    "ai-credits": "AI Credits",
+    "lists-bookmarks": "Lists and bookmarks",
+    "credit-left": "You have {count} AI Credits left",
+    "bookmark-left": "Bookmarks left - {bookmark count}, Lists left - {list count}",
+    "unlimited": "Unlimited",
+    "refreshed-on": "Refreshes on {date}"
+  },
+  "current-plan-card": {
+    "title": "Current plan",
+    "canceled-expires": "Canceled - Expires <strong>{value}</strong>",
+    "cancel-subscription": "Cancel Subscription",
+    "resume-subscription": "Resume Subscription",
+    "plan": "Plan",
+    "lifetime-access": "Lifetime Access",
+    "view-our-pricing": "View our pricing"
+  },
+  "upgrade-plan-card": {
+    "title-premium": "Want unlimited? Upgrade to Premium.",
+    "title-enterprise": "Need teamwork? Upgrade to Enterprise:",
+    "description-enterprise": "Manage accounts for your organization, share bookmarks and lists with your team and much more...",
+    "upgrade-plan": "Upgrade plan",
+    "contact-sales": "Contact sales",
+    "get-access": "Get Access",
+    "per-month": "per Month",
+    "billed-annually": "billed annually",
+    "view-our-pricing": "View our pricing"
+  },
+  "billing-card": {
+    "title": "Billing",
+    "manage-payment-method": "Manage Payment Method",
+    "expiring": "expiring",
+    "renews-on": "Renews on"
+  },
+  "upgrade-features-card": {
+    "title": "Upgrade for these benefits:",
+    "view-pricing": "View pricing"
+  },
+  "subscription-features": {
+    "free-features": [
+      "Unlimited searches",
+      "Unlimited research quality indicators",
+      "Unlimited AI-powered filters",
+      "20 AI credits per month for our most powerful AI features: GPT-4 Summaries, Consensus Meters, and Study Snapshots"
+    ],
+    "enterprise-features": [
+      "Manage accounts for your organisation",
+      "Share bookmarks and lists with your team",
+      "Integrate with your research library",
+      "And much more. Reach out to help us shape the enterprise product!"
+    ]
+  },
+  "premium-feature-modal": {
+    "title": "Upgrade to Premium",
+    "per-month": "per month",
+    "button-upgrade": "Upgrade",
+    "button-pricing": "Pricing"
+  },
+  "use-credit-modal": {
+    "title": "Monthly Synthesize Usage",
+    "no-credits-title": "No AI Credits left",
+    "renews-on": "Renews on",
+    "unlock-with-premium": "<b>0 out of {max-count} AI Credits left!</b> Get unlimited with Premium",
+    "pricing": "Pricing",
+    "pricing-text1": "Or visit our",
+    "pricing-text2": "page for more detail",
+    "credits-left": "Credits left",
+    "want-unlimited": "Want unlimited?",
+    "upgrade-to-premium": "Upgrade to Premium",
+    "use-credits-button": "Use Credits"
+  },
+  "save-search-modal": {
+    "title": "Save to a list",
+    "create-new-list": "Create new list",
+    "my-favorites": "My favorites",
+    "items": "Items",
+    "done": "Done",
+    "cancel": "Cancel"
+  },
+  "create-new-list-modal": {
+    "title": "Create a new list",
+    "list-name": "List name",
+    "characters-maximum": "{max-value} characters maximum",
+    "button-create": "Create new list",
+    "cancel": "Cancel"
+  },
+  "confirm-bookmark-list-modal": {
+    "title": "Do you want to delete this list?",
+    "description": "You won't be able to recover this after deleting it",
+    "button-ok": "Delete",
+    "button-cancel": "Cancel"
+  },
+  "student-discount": {
+    "merge-account-modal": {
+      "title": "Follow this instruction to merge accounts:",
+      "text1": "Go to your ",
+      "text1-link-text": "Consensus Account Profile",
+      "text2": "In the Email Addresses section, click “Add an email address”",
+      "text3": "Add your .edu email address",
+      "text4": "Come back to this page and click “My Consensus account has a .edu email address” in the previous step"
+    },
+    "existing-email-modal": {
+      "title": "Instructions:",
+      "description": "Send us an email with the following to claim your student discount:",
+      "text1": "Your Consensus account email",
+      "text2": "Some proof of enrollment (student id, email address, etc. )",
+      "text3": "Your graduation year",
+      "send-email": "Send email"
+    },
+    "no-edu-email-modal": {
+      "title": "We could not find a .edu email address associated with your account",
+      "text1": "Please add a .edu email address to your",
+      "text2": ", or reach out to",
+      "text3": "if you are encountering issues",
+      "link-text1": "Consensus account",
+      "link-text2": "Support"
+    },
+    "ask-graduation-year-modal": {
+      "title": "Select your graduation year",
+      "apply": "Apply",
+      "year-picker": {
+        "year": "Year"
+      }
+    },
+    "premium-modal": {
+      "title1": "Use your",
+      "title2": "Premium",
+      "title3": "student discount",
+      "equivalent-to": "Equivalent to",
+      "per-month": "per month",
+      "per-year": "per year",
+      "button-discount": "Use Discount"
+    }
+  },
+  "filter": {
+    "study-types": "Study Types",
+    "study-details": "Study Details",
+    "journals": "Journals",
+    "domains": "Domains",
+    "controlled-studies": "Controlled Studies",
+    "human-studies": "Human Studies",
+    "sample-size": "Sample size",
+    "sjr-quartile-rating": "SJR Quartile rating",
+    "apply": "Apply",
+    "reset-filters": "Reset filters",
+    "all-years": "All years",
+    "published-since": "Published since"
+  },
+  "study-snapshot": {
+    "title": "Study Snapshot",
+    "population": "Population",
+    "sample-size": "Sample size",
+    "num-of-studies": "Num of studies",
+    "methods": "Methods",
+    "outcomes": "Outcomes",
+    "unlock-with-premium": "<b>0 out of {max-count} AI Credits left!</b> Get unlimited with Premium",
+    "unlock-with-premium-desc1": "Or visit our",
+    "unlock-with-premium-pricing": "pricing",
+    "unlock-with-premium-desc2": "page for more detail",
+    "upgrade-to-premium": "Upgrade to Premium",
+    "error-msg": "Error generating details. Please try again later",
+    "generate-snapshot": "Generate Snapshot"
+  },
+  "ai-credits-tooltip": {
+    "title": "Free AI Credits",
+    "description": "AI Credits are needed for our most expensive AI models, like the GPT-4 Summary and the Consensus Meter",
+    "ai-credits-left": "AI Credits left",
+    "renews-on": "Renews on",
+    "need-unlimited?": "Need unlimited?",
+    "upgrade": "Upgrade"
+  },
+  "quartile": {
+    "title": "SJR Quartile",
+    "scimago-journal-rank": "Scimago Journal Rank",
+    "description": "measures the influence of journals within a domain. Scores are divided into quartiles, with Q1 being the most influential and Q4 being the least.",
+    "here": "here",
+    "we-could-not-map": "We could not map this paper to a journal with an SJR score. If you think this is a mistake, please let us know"
+  }
+}

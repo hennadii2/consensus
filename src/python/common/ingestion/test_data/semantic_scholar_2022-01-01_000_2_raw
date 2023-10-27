@@ -1,0 +1,69 @@
+{
+    "id": "062e9c7579adc73129e1198671d05905f07d4ab5",
+    "title": "Clinical or Industrial Pharmacy? Case Studies of Hospital Pharmacy Automation in Canada and France",
+    "paperAbstract": "Automated medication dispensing systems for hospital pharmacies, heralded as an important means of reducing drug errors and improving labor productivity, have also been seen as a means of furthering the transformation of the pharmacy profession from its role in dispensing prescriptions to a clinical profession concerned with treatments and patient outcomes. Automation aids this transformation by transferring the responsibility for routine dispensing to technicians performing rationalized and computer-mediated tasks. Not all pharmacists agree with these trends. Some fear a loss of professional status and employment as their knowledge is expropriated and incorporated into machinery operated by those with lesser qualifications. They fear an industrial rather than a clinical future. Their concerns are compounded by health care cutbacks. These issues were studied at two hospitals in Canada and one in France, all mid-sized public hospitals with automated unit dose drug delivery systems installed in the late 1980s and early 1990s. Preliminary results indicated national differences in approaches to hospital pharmacy automation. In Canada, pharmacists have resisted major changes in their control of the dispensing process and in their traditional roles vis \u00e0 vis doctors and pharmacy technicians. In France, where hospital pharmacy as a profession is less developed than in North America, automation has brought about a far more radical substitution for pharmacists' labor.",
+    "authors": [
+        {
+            "name": "J  Novek",
+            "ids": [
+                "47586327"
+            ],
+            "structuredName": null
+        }
+    ],
+    "inCitations": [
+        "799bde07f3e9dc7f39d30ae9e1ac29cda9cd5a5c",
+        "663b3c9bbc9a1309d636044e50347e177da74624",
+        "59a8feb7cfbc50c64152b116dba1dad3412cd104",
+        "c99841c4b20d932557c88807bcb5ade30c7015f3",
+        "4b1262fe3464cde84e4cb5f5d2ae65ae32042485",
+        "23d2cdbc256deb8e00e829c3a92cf7b7dc9f9f52",
+        "df39365a156ea828184c359348f78811c673c553",
+        "bd83b3183a024806f957b381dea83cb54d639c63",
+        "e8212e6887515d942e2718623a55017c9586513a",
+        "d971ec3ac906e2eeeb55085e7981dd00f0d89ea3"
+    ],
+    "outCitations": [
+        "26481340135fb307993adf54a8dec878143a8a00",
+        "c33122bc4d2780bf1a42160efda2c97f65643b19",
+        "e199c5f0fb793b7d9bb1498f8d095524a2e86a81",
+        "39ae41005ac4a91a43d8e73fdaf42ddc97a050ef",
+        "a402dac75befed8c389fe00a3b6eed7ee8da87e1",
+        "1723e0346fc1de5bb835c71c66388c1c128a1abe",
+        "5e266d4c50630b20a4bcbbceac7ead5b2b8e4a51",
+        "90c7289240281ed7300d7a3a5d8916674be28100",
+        "9d345ea1f94c8d01f46afcc4e9238e647029489c",
+        "598853073d646f9d86124dd804294163e4dc6c6f",
+        "2a012d8f4630cd0bac2e038cf9cb20f65fc9d0c6",
+        "f399655322b17d31515178050779a6d6f0a4ad68",
+        "eac59ad6377028dce6bf0604610be969c65bd516",
+        "ddc676ecdf1784c5241f5afb2947c980609568c5",
+        "e121fb377bf9f4e8c2a864ee66e6e68b7c229366",
+        "94e54a72e5d8c736d6ca41becf85bda51a527a35",
+        "4a26d06a38680498895fa9b7a1b2004c2484673c",
+        "0ac259672357b2a6aa35bdea62e4781c3bd49976",
+        "7d98fde2bdb4e879c1f578e4cdb4d0c8e0334783",
+        "c641b685483c831578dc4cb12e9ff9a68e9751e3",
+        "ee6e9bd43376f72aeaec5496b8fe7dadfe6a57ad",
+        "90241d37be4b06dd9b2f4ee4cf8de9089d7ea9ce"
+    ],
+    "year": 1998,
+    "s2Url": "https://semanticscholar.org/paper/062e9c7579adc73129e1198671d05905f07d4ab5",
+    "sources": [
+        "Medline"
+    ],
+    "pdfUrls": [],
+    "venue": "International journal of health services : planning, administration, evaluation",
+    "journalName": "International Journal of Health Services",
+    "journalVolume": "28",
+    "journalPages": "445 - 465",
+    "doi": "10.2190/W2BT-FGXQ-QL0G-YNL9",
+    "doiUrl": "https://doi.org/10.2190/W2BT-FGXQ-QL0G-YNL9",
+    "pmid": "9711475",
+    "fieldsOfStudy": [
+        "Medicine"
+    ],
+    "magId": "1988383910",
+    "s2PdfUrl": "",
+    "entities": []
+}

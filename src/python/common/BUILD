@@ -1,0 +1,27 @@
+python_distribution(
+    name="common_dist",
+    dependencies=[
+        "//src/python/common/beam",
+        "//src/python/common/beam/records",
+        "//src/python/common/cache",
+        "//src/python/common/config",
+        "//src/python/common/db",
+        "//src/python/common/db/test",
+        "//src/python/common/db/records",
+        "//src/python/common/ingestion",
+        "//src/python/common/ingestion/semantic_scholar",
+        "//src/python/common/logging",
+        "//src/python/common/models",
+        "//src/python/common/models/baseten",
+        "//src/python/common/models/openai",
+        "//src/python/common/search",
+        "//src/python/common/storage",
+        "//src/python/common/text_cleaning",
+        "//src/python/common/time",
+    ],
+    provides=python_artifact(
+        name="common_dist",
+        version="1.0",
+    ),
+    wheel_config_settings={"--global-option": ["--python-tag", "py38"]},
+)

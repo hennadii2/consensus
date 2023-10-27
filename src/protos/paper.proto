@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package protos;
+
+import "paper_metadata.proto";
+
+message PaperStatus {
+  enum Status {
+    UNKNOWN_STATUS = 0;
+    INGESTED = 1;
+    CLEANED = 2;
+  }
+
+  // Processing status
+  Status status = 1;
+
+  // Name of job that wrote metadata for the paper
+  string ingested_by = 2;
+
+  // Timestamp of the last job that ingested the paper
+  int64 last_ingested_usec = 3;
+
+  // Name of job that last cleaned the paper
+  string cleaned_by = 4;
+
+  // Timestamp of the last job that cleaned the paper
+  int64 last_cleaned_usec = 5;
+}
+
+// Next id: 11
+message Paper {
+  // DB generated sequential ID
+  int64 id = 1;
+
+  // String representation of paper ID
+  // For v1 data this is the field id converted to a string.
+  // For v2 data this is a unique ID for the paper.
+  string paper_id = 10;
+
+  // Metadata related to a paper
+  PaperMetadata metadata = 2;
+
+  // JSON string of provider metadata
+  string provider_metadata = 8;
+
+  // The status of the paper
+  PaperStatus status = 3;
+
+  // Location of clean data text
+  string raw_data_url = 4;
+
+  // Location of clean data text
+  string clean_data_url = 5;
+
+  // MD5 hex hash of the clean data text
+  // Used to avoid reading data from blob store for change comparison
+  string clean_data_hash = 9;
+
+  // Timestamp (microseconds) of when this paper was added to the DB
+  int64 created_at_usec = 6;
+
+  // Timestamp (microseconds) of when this paper was last updated in the DB
+  int64 last_updated_at_usec = 7;
+}

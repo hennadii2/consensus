@@ -1,0 +1,98 @@
+version: "3.9"
+
+services:
+  api:
+    image: common_fastapi_docker:latest
+    environment:
+      - WEB_CHAT_GPT_PLUGIN_ENV=${WEB_BACKEND_ENV}
+      - WEB_CHAT_GPT_PLUGIN_LOG_LEVEL=${WEB_BACKEND_LOG_LEVEL}
+      - WEB_CHAT_GPT_PLUGIN_PORT=${WEB_BACKEND_PORT_INTERNAL}
+      - WEB_CHAT_GPT_PLUGIN_SEARCH_INDEX=mock-data
+      - WEB_CHAT_GPT_PLUGIN_DEPLOYED_URL=http://localhost:${WEB_BACKEND_PORT}
+      - ELASTIC_URI_LOCAL=${ELASTIC_URI_LOCAL_INTERNAL}
+      - POSTGRES_URI_LOCAL=${POSTGRES_URI_LOCAL_INTERNAL}
+      - REDIS_CACHE_URI_LOCAL=${REDIS_CACHE_URI_LOCAL_INTERNAL}
+      - CLERK_JWT_VERIFICATION_KEY_LOCAL=${CLERK_JWT_VERIFICATION_KEY_LOCAL}
+      - CONSENSUS_CHAT_GPT_PLUGIN_API_KEY=${CONSENSUS_CHAT_GPT_PLUGIN_API_KEY_LOCAL}
+      - HUGGING_FACE_ACCESS_TOKEN=${HUGGING_FACE_ACCESS_TOKEN_LOCAL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY_LOCAL}
+      - TRANSFORMERS_CACHE=/shared/common/cache
+      - HF_DATASETS_CACHE=/shared/common/cache
+      - HF_HOME=/shared/common/cache
+    entrypoint: python main.py
+    volumes:
+      - ./app/main.py:/shared/common/main.py
+      - ./app:/shared/common/web/chat_gpt_plugin/app
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - shared_common_data:/shared/common/data
+      - shared_common_cache:/shared/common/cache
+    ports:
+      - ${WEB_BACKEND_PORT}:${WEB_BACKEND_PORT_INTERNAL}
+    depends_on:
+      db:
+        condition: service_healthy
+      search:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - ../../infra/db/main.sql:/docker-entrypoint-initdb.d/1.sql
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_PORT_INTERNAL}
+    healthcheck:
+      test: pg_isready -U postgres -p ${POSTGRES_PORT_INTERNAL}
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    logging:
+      # Suppress log output
+      driver: "none"
+
+  search:
+    image: elasticsearch:8.8.0
+    environment:
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - bootstrap.memory_lock=true
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms750m -Xmx750m"
+      - xpack.security.enabled=true
+    volumes:
+      - ../../common/search/resources/stopwords.txt:/usr/share/elasticsearch/config/stopwords.txt
+      - ../../common/search/resources/synonyms.txt:/usr/share/elasticsearch/config/synonyms.txt
+    ports:
+      - ${ELASTIC_PORT}:${ELASTIC_PORT_INTERNAL}
+      - ${ELASTIC_PORT_2}:${ELASTIC_PORT_INTERNAL_2}
+    healthcheck:
+      test: curl -s http://search:${ELASTIC_PORT_INTERNAL} >/dev/null || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    logging:
+      # Suppress log output
+      driver: "none"
+
+  cache:
+    image: redis:6.2-alpine
+    restart: always
+    volumes:
+      - cache:/data
+    ports:
+      - ${REDIS_PORT}:${REDIS_PORT_INTERNAL}
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  cache:
+  shared_common_data:
+  shared_common_cache:

@@ -1,0 +1,68 @@
+deployment:
+  enabled: true
+  rollout: true
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: false
+      activeService: ${name}-monochart
+  revisionHistoryLimit: 3
+
+serviceAccountName: github-actions
+
+replicaCount: ${replicas}
+
+service:
+  enabled: true
+  type: LoadBalancer
+  ports:
+    default:
+      internal: 8080
+      external: 8080
+  annotations:
+    cloud.google.com/load-balancer-type: "Internal"
+
+configMaps:
+  default:
+    enabled: true
+    env:
+      GCLOUD_PROJECT_ID: "consensus-334718"
+      WEB_BACKEND_AUTOCOMPLETE_INDEX: "${autocomplete_index}"
+      WEB_BACKEND_DB_ENV: "${backend_db_env}"
+      WEB_BACKEND_ENV: "${backend_env}"
+      WEB_BACKEND_PORT: '8080'
+      WEB_BACKEND_SEARCH_ENV: "${backend_search_env}"
+      WEB_BACKEND_SEARCH_INDEX: "${search_index}"
+      WEB_BACKEND_SERVICES_HOST: "http://${env}-web-services-monochart.${namespace}.svc.cluster.local:8080"
+
+resources:
+  limits:
+    cpu: ${cpu_limit}
+    memory: ${memory_limit}
+  requests:
+    cpu: ${cpu_request}
+    memory: ${memory_request}
+
+probes:
+  livenessProbe:
+    httpGet:
+      path: /custom_liveness_check
+      port: 8080
+      httpHeaders:
+      - name: X-Forwarded-For
+        value: 127.0.0.1
+    periodSeconds: 15
+    timeoutSeconds: 4
+    failureThreshold: 4
+    successThreshold: 1
+
+  startupProbe:
+    httpGet:
+      path: /custom_readiness_check
+      port: 8080
+      httpHeaders:
+      - name: X-Forwarded-For
+        value: 127.0.0.1
+    periodSeconds: 10
+    timeoutSeconds: 4
+    failureThreshold: 30
+    successThreshold: 1

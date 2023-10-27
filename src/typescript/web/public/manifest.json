@@ -1,0 +1,27 @@
+{
+  "name": "Consensus",
+  "short_name": "Consensus",
+  "start_url": "/search",
+  "display": "minimal-ui",
+  "background_color": "#E7FAF3",
+  "theme_color": "#eafaf5",
+  "description": "Consensus is a search engine that uses AI to find answers in scientific research.",
+  "categories": ["education", "fitness", "health", "medical"],
+  "icons": [
+    {
+      "src": "/images/maskable_icon_x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/images/maskable_icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/maskable_icon_x1060.png",
+      "type": "image/png",
+      "sizes": "1060x1060"
+    }
+  ]
+}

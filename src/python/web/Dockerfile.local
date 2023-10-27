@@ -1,0 +1,34 @@
+FROM python:3.9
+
+WORKDIR /shared/common
+
+# Install python requirements
+COPY ./3rdparty/python/requirements.txt /shared/common/requirements.txt
+RUN /usr/local/bin/python -m pip install --upgrade pip && \
+    sed -i '/types/d' requirements.txt && \
+    sed -i '/test/d' requirements.txt && \
+    sed -i '/apache-beam/d' requirements.txt && \
+    sed -i '/pyspark/d' requirements.txt && \
+    pip install -r requirements.txt
+
+# Compile protobuf files
+COPY ./src/protos /shared/common/protos
+RUN apt-get update && \
+    apt-get install -y protobuf-compiler && \
+    protoc --version && \
+    apt-get clean && \
+    protoc -I=./protos/. --python_out=. protos/claim.proto && \
+    protoc -I=./protos/. --python_out=. protos/paper_metadata.proto && \
+    protoc -I=./protos/. --python_out=. protos/paper.proto && \
+    protoc -I=./protos/. --python_out=. protos/paper_inferences.proto && \
+    protoc -I=./protos/. --python_out=. protos/journal.proto
+
+# Copy in source files
+COPY ./src/python/common /shared/common/common
+COPY ./src/python/web  /shared/common/web
+COPY ./data /shared/common/data
+
+# Create local python modules
+RUN touch ./protos/__init__.py
+
+ENTRYPOINT ["bash", "-c"]

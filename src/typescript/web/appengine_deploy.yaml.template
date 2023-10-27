@@ -1,0 +1,30 @@
+# GCP App Engine deployment configuration: TEMPLATE
+# Environment variables are replaced by github actions during deployment
+
+runtime: custom
+env: flex
+service: ${ APPENGINE_SERVICE_NAME }
+env_variables:
+  FE_WEB_BACKEND_URI: ${ FE_WEB_BACKEND_URI }
+  FE_DEPLOYMENT_ENV: ${ FE_DEPLOYMENT_ENV }
+
+network:
+  instance_tag: ${ APPENGINE_INSTANCE_TAG }
+  name: dev-vpc
+  subnetwork_name: subnet-us-central1
+
+automatic_scaling:
+  min_num_instances: ${ APPENGINE_SCALING_MIN_NUM_INSTANCES }
+  max_num_instances: ${ APPENGINE_SCALING_MAX_NUM_INSTANCES }
+  cpu_utilization:
+    target_utilization: ${ APPENGINE_SCALING_TARGET_CPU_UTILIZATION }
+
+resources:
+  cpu: ${ APPENGINE_RESOURCES_CPU }
+  memory_gb: ${ APPENGINE_RESOURCES_MEMORY_GB }
+  disk_size_gb: ${ APPENGINE_RESOURCES_DISK_SIZE_GB }
+
+handlers:
+  - url: /.*
+    secure: always
+    script: auto

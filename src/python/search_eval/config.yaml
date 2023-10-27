@@ -1,0 +1,21 @@
+default:
+  db_env: "prod"
+  search_env: "dev"
+  index_name: "populate-elasticsearch-with-full-claim-documents-230820025818"
+  
+
+v2-baseline:
+  db_env: "prod"
+  search_env: "dev"
+  index_name: "populate-elasticsearch-with-full-claim-documents-orig-230820160759"
+  paper_eval: True
+
+
+v2-citation-min-0-max-1000:
+  db_env: "prod"
+  search_env: "dev"
+  index_name: "populate-elasticsearch-with-full-paper-documents-230814232031"
+  paper_eval: True
+  sort_params:
+    citation_count_min: 0
+    citation_count_max: 1000
