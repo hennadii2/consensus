@@ -1,0 +1,47 @@
+[GLOBAL]
+pants_version = "2.15.0"
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.lint.autoflake",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.flake8",
+  "pants.backend.python.typecheck.mypy",
+  "pants.backend.google_cloud_function.python",
+  "pants.backend.shell",
+  "pants.backend.shell.lint.shellcheck",
+  "pants.backend.shell.lint.shfmt",
+  "pants.backend.codegen.protobuf.python",
+  "pants.backend.docker",
+]
+local_store_dir = ".cache/pants/lmdb_store"
+named_caches_dir = ".cache/pants/named_caches"
+pants_ignore = ["!**/secrets.json", "!**/*.crt", "!src/typescript/web/.env" ,"!src/typescript/labeling/.env", "!src/python/web/.env"]
+
+[anonymous-telemetry]
+enabled = false
+
+[python]
+interpreter_constraints = ["CPython==3.9.*"]
+
+[python-protobuf]
+mypy_plugin = true
+
+[docker]
+env_vars = ["HOME", "DOCKER_BUILDKIT=1", "GIT_COMMIT='local'", "LATEST_BRANCH_TAG='latest'", "GCLOUD_PROJECT_ID='consensus-334718'"]
+default_repository = "{name}"
+build_args = ["GIT_COMMIT", "LATEST_BRANCH_TAG", "GCLOUD_PROJECT_ID"]
+
+[environments-preview.names]
+py39_local_arm64 = "//:py39_linux_arm64"
+
+[mypy]
+extra_type_stubs = [
+  "types-protobuf==3.20.2",
+  "types-psycopg2==2.9.5",
+  "types-redis==4.3.13",
+  "types-requests==2.28.0",
+  "types-setuptools==57.4.4",
+  "types-PyYAML==6.0.12.2",
+  "pandas-stubs==1.4.3.220724"
+]
