@@ -1,0 +1,57 @@
+deployment:
+  enabled: true
+  rollout: true
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: false
+      activeService: ${name}-monochart
+  revisionHistoryLimit: 3
+
+serviceAccountName: github-actions
+
+replicaCount: ${replicas}
+
+service:
+  enabled: true
+  type: LoadBalancer
+  ports:
+    default:
+      internal: 8080
+      external: 8080
+  annotations:
+    cloud.google.com/load-balancer-type: "Internal"
+
+configMaps:
+  default:
+    enabled: true
+    env:
+      GCLOUD_PROJECT_ID: "consensus-334718"
+      WEB_SERVICES_ENV: "${env}"
+      WEB_SERVICES_PORT: "8080"
+
+resources:
+  limits:
+    cpu: ${cpu_limit}
+    memory: ${memory_limit}
+  requests:
+    cpu: ${cpu_request}
+    memory: ${memory_request}
+
+probes:
+  livenessProbe:
+    httpGet:
+      path: /custom_liveness_check
+      port: 8080
+    periodSeconds: 15
+    timeoutSeconds: 4
+    failureThreshold: 4
+    successThreshold: 1
+
+  startupProbe:
+    httpGet:
+      path: /custom_readiness_check
+      port: 8080
+    periodSeconds: 10
+    timeoutSeconds: 4
+    failureThreshold: 30
+    successThreshold: 1
